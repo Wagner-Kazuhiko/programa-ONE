@@ -12,9 +12,23 @@
 
         var ano = 2022;
 
-        document.write("O Flávio nasceu em " + (ano - 40) + "<br>"); //para não somar como uma string deve-se acrescentar parenteses
-        document.write("O Joaquim nasceu em " + (ano - 20) + "<br>");
-        document.write("O Zé nasceu em " + (ano - 34) + "<br>");
+        document.write("O Flávio nasceu tem " + (ano - 1977 + " anos") + "<br>"); //para não somar como uma string deve-se acrescentar parenteses
+        document.write("O Joaquim nasceu tem " + (ano - 1996) + " anos" + "<br>");
+        document.write("O Barney nasceu tem " + (ano - 1976) + " anos" + "<br>");
+
+        var idadeFlavio = 45;
+        var idadeJoaquim = 26;
+        var idadeBarney = 46;
+        
+        var media = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
+
+        document.write("A média das idades é: " + Math.round(media));
+
+        var nomeFlavio = "Flavio";
+
+        document.write("<br>");
+        document.write("A idade de " + nomeFlavio + " é " + idadeFlavio);
+        
         
     </script>
     
