@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+
+    <script>
+
+        function pulaLinha() {
+            document.write("<br><br>")
+        }
+
+        function mostra(frase){
+            document.write(frase)
+            pulaLinha();
+        }
+        
+        var pesoFlavio = 73;
+        var alturaFlavio = 1.71;
+
+        var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
+
+        mostra("O IMC do Flávio é " + Math.round(imcFlavio));
+
+        var pesoAmigo = 68;
+        var alturaAmigo = 1.72;
+        var imcAmigo = pesoAmigo / (alturaAmigo * alturaAmigo);
+
+        mostra("O IMC do meu amigo é " + Math.round(imcAmigo));
+
+        var pesoTia = 50;
+        var alturaTia = 1.72;
+        
+
+        
+        
+    </script>
+    
+</body>
+</html>
