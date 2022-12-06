@@ -18,23 +18,20 @@
             document.write(frase)
             pulaLinha();
         }
+
+        function calculaImc(altura, peso){
+            var imc = peso / (altura * altura);
+            mostra("O IMC calculado é " + Math.round(imc));
+
+        }
         
         var pesoFlavio = 73;
         var alturaFlavio = 1.71;
-
-        var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
-
-        mostra("O IMC do Flávio é " + Math.round(imcFlavio));
+        calculaImc(alturaFlavio, pesoFlavio);
 
         var pesoAmigo = 68;
         var alturaAmigo = 1.72;
-        var imcAmigo = pesoAmigo / (alturaAmigo * alturaAmigo);
-
-        mostra("O IMC do meu amigo é " + Math.round(imcAmigo));
-
-        var pesoTia = 50;
-        var alturaTia = 1.72;
-        
+        calculaImc(alturaAmigo, pesoAmigo);
 
         
         
