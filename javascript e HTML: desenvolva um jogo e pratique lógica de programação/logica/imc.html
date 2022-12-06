@@ -26,21 +26,14 @@
 
         }
         
-        var pesoFlavio = 73;
-        var alturaFlavio = 1.71;
-        var imcFlavio = calculaImc(pesoFlavio, alturaFlavio)
-        
+        var alturaInformada = 1.71;
+        var pesoInformado = 73;
 
-        var pesoAmigo = 68;
-        var alturaAmigo = 1.72;
-        var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
+        var imc = calculaImc(pesoInformado, alturaInformada);
 
-        mostra(imcFlavio);
-        mostra(imcAmigo);
+        var imc = calculaImc(pesoInformado, alturaInformada);
 
-        var totalImc = imcFlavio + imcAmigo;
-
-        document.write("A soma dos IMC's é " + totalImc)
+        document.write("O IMC calculado é " + imc);
        
 
         
