@@ -12,21 +12,31 @@
 
     <script>
 
-var segredo = Math.round(Math.random() * 10);
-       var input = document.querySelector("input");
-       input.focus();
+    var segredos = [5, 7, 10, 2, 3];
+
+    var input = document.querySelector("input");
+    input.focus();
        
-        function verifica(){
+    function verifica(){
 
-            if(input.value == segredo){
-                alert("Você acertou!");
-             }
-            else{
-                alert("Você errou!");
-             }
+        var achou = false;
 
-             input.value = "";
-             input.focus();
+        for(var posicao = 0; posicao < segredos.length; posicao ++){
+
+            if(input.value == segredos[posicao]){
+            alert("Você acertou!");
+            achou = true;
+            break;
+            }
+    
+        }
+
+        if(achou == false){
+            alert("Você errou");
+        }
+
+        input.value = "";
+        input.focus();
         }
 
         var button = document.querySelector("button");
