@@ -11,26 +11,21 @@
     
     <script>
 
-        function desenhaQuadrado(x, y, cor){
-            var tela = document.querySelector("canvas");
-            var pincel = tela.getContext("2d");
+    function desenhaQuadrado(x, y, cor) {
 
-            pincel.fillStyle = cor;
-            pincel.fillRect(x, y, 50, 50);
-            pincel.fillStroke = "black";
-            pincel.strokeRect(x, y, 50, 50);
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
 
-        }       
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, 50);
 
-        pincel.fillRect(50, 0, 50, 50);
-        pincel.strokeRect(50, 0, 50, 50);
+}
 
-        pincel.fillRect(100, 0, 50, 50);
-        pincel.strokeRect(100, 0, 50, 50);
-
-        desenhaQuadrado(0, 0, "green");
-        desenhaQuadrado(50, 0, "green");
-        desenhaQuadrado(100, 0, "green");
+desenhaQuadrado(0, 0, 'green');
+desenhaQuadrado(50, 0, 'green');
+desenhaQuadrado(100, 0, 'green');
 
     </script>
 </body>
