@@ -16,14 +16,19 @@
         pincel.fillStyle = "grey";
         pincel.fillRect(0, 0, 600, 400);
 
-        function exibeAlerta(evento){
+        function desenhaCirculo(evento){
 
-            console.log(evento);
-            alert("Cliquei");
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = "blue";
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+            console.log(x + " , " + y);
             
         }
 
-        tela.onclick = exibeAlerta;
+        tela.onclick = desenhaCirculo;
     </script>
     
 </body>
