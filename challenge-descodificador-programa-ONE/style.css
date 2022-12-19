@@ -1,4 +1,13 @@
+body {
+    font-family: arial,Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
 /*HEADER*/
+
+.cabecalho{
+    display: flex;
+}
 
 .logo-alura{
     height: 48px;
@@ -26,11 +35,11 @@
 
 /*MAIN*/
 
-.box-botoes{
-    align-items: center;
+.main{
+    position: relative;
 }
 
-.botao-cripto{
+.box-botoes{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -40,38 +49,28 @@
     width: 328px;
     height: 67px;
 
-    /* Dark blue/dark-blue-300 */
+}
 
+.botao-cripto{
     background: #0A3871;
+    box-sizing: border-box;
+    width: 328px;
+    height: 67px;
     border-radius: 24px;
-
-    /* Inside auto layout */
-
+    color: #fff;
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
 .botao-descripto{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 8px;
-    
+    background: #D8DFE8;
+    box-sizing: border-box;
     width: 328px;
     height: 67px;
-    
-    /* Light gray */
-    
-    background: #D8DFE8;
-    /* Dark blue/dark-blue-300 */
-    
     border: 1px solid #0A3871;
+    color:  #0A3871;
     border-radius: 24px;
-    
-    /* Inside auto layout */
-    
     flex: none;
     order: 1;
     flex-grow: 0;
