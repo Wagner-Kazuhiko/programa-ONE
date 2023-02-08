@@ -3,7 +3,7 @@ package condicionais;
 public class TestaCondicional {
     public static void main(String[] args) {
 
-        System.out.println("Tesyando condicionais");
+        System.out.println("Testando condicionais");
         int idade = 15;
         int quantidadeDePessoas = 3;
         if (idade >= 18){
