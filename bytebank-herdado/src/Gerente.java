@@ -16,7 +16,8 @@ public class Gerente extends Funcionario{
     }
 
     public double getBonificacao(){
-            return super.getBonificacao() +  super.getSalario();
+        System.out.println("Chamando o método de bonificação do GERENTE");
+        return super.getBonificacao() +  super.getSalario();
     }
 
 }
