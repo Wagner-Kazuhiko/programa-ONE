@@ -6,11 +6,11 @@ public class TesteTributaveis {
 
         SeguroDeVida seguro = new SeguroDeVida();
 
-        CalculadorImposto calc = new CalculadorImposto();
+        CalculadorDeImposto calc = new CalculadorDeImposto();
         calc.registra(cc);
         calc.registra(seguro);
 
         System.out.println(calc.getTotalImposto());
-
+        
     }
 }

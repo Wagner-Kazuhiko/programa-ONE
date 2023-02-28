@@ -1,4 +1,4 @@
-public class CalculadorImposto{
+public class CalculadorDeImposto {
 
     private  double totalImposto;
     public void registra(Tributavel t){
