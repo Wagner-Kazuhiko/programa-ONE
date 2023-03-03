@@ -11,6 +11,6 @@ public class TesteTributaveis {
         calc.registra(seguro);
 
         System.out.println(calc.getTotalImposto());
-        
+
     }
 }
