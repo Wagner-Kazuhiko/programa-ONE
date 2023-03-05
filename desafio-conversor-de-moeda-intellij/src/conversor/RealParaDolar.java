@@ -1,15 +1,26 @@
 package conversor;
 
+
+import java.io.IOException;
+
 public class RealParaDolar implements ContratoConverteMoedas{
 
-    private double taxaDeCambio;
+    private ApiConverteMoeda apiConverteMoeda;
 
-    public RealParaDolar(double taxaDeCambio) {
-        this.taxaDeCambio = taxaDeCambio;
+    public RealParaDolar(ApiConverteMoeda apiConverteMoeda) {
+        this.apiConverteMoeda = apiConverteMoeda;
     }
 
     @Override
-    public double converte(double valor) {
+    public double converte(double valor) throws IOException {
+        double taxaDeCambio = apiConverteMoeda.getTaxaDeCambio("BRL", "USD");
         return valor / taxaDeCambio;
     }
+
+    public double converteComApi(double valor) throws IOException {
+        return converte(valor);
+    }
+
+
+
 }
