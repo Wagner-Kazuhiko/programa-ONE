@@ -1,6 +1,9 @@
 public class TesteContas {
     public static void main(String[] args) {
 
+        int a = 3;
+        int b = a / 0;
+
         ContaCorrente outra = null;
         outra.deposita(200.0);
 
