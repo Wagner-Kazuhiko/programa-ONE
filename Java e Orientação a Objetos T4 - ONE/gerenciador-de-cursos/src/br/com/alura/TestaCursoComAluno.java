@@ -1,5 +1,7 @@
 package br.com.alura;
 
+import java.util.Set;
+
 public class TestaCursoComAluno {
 
     public static void main(String[] args) {
@@ -19,11 +21,13 @@ public class TestaCursoComAluno {
         javaColecoes.matricula(a3);
 
         System.out.println("Todos os alunos matriculados: ");
+
         javaColecoes.getAlunos().forEach(a -> {
             System.out.println(a);
         });
 
-        System.out.println("O aluno está matriculado?");
+
+        System.out.println("O aluno " + a1 + " está matriculado?");
         System.out.println(javaColecoes.estaMatriculado(a1));
 
         Aluno turini = new Aluno("Rodrigo Turini", 34672);
