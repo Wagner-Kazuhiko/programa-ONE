@@ -9,26 +9,26 @@ public class TestaInsercaoComParametro {
         String descricao = "Mouse sem fio";
 
         ConnectionFactory factory = new ConnectionFactory();
-        Connection connection = factory.recuperarConexao();
-        connection.setAutoCommit(false);
+        try (Connection connection = factory.recuperarConexao()) {
+            connection.setAutoCommit(false);
 
-        try{
-            PreparedStatement stm = connection.prepareStatement("INSERT INTO PRODUTO (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
+            try (
+                    PreparedStatement stm = connection.prepareStatement("INSERT INTO PRODUTO (nome, descricao) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
+            ) {
 
-            stm.setString(1, nome);
-            stm.setString(2, descricao);
+                stm.setString(1, nome);
+                stm.setString(2, descricao);
 
-            adicionarVariavel("SmartTV", "45 polegadas", stm);
-            adicionarVariavel("Radio", "Radio de bateria", stm);
+                adicionarVariavel("SmartTV", "45 polegadas", stm);
+                adicionarVariavel("Radio", "Radio de bateria", stm);
 
-            connection.commit();
+                connection.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("ROLLBACK EXECUTANDO");
+                connection.rollback();
+            }
         }
-        catch (Exception e){
-            e.printStackTrace();
-            System.out.println("ROLLBACK EXECUTANDO");
-            connection.rollback();
-        }
-
 
     }
 
@@ -42,11 +42,11 @@ public class TestaInsercaoComParametro {
 
         stm.execute();
 
-        ResultSet rst = stm.getGeneratedKeys();
-        while (rst.next()){
-            Integer id = rst.getInt(1);
-            System.out.println("O ID criado foi: " + id);
+        try (ResultSet rst = stm.getGeneratedKeys()) {
+            while (rst.next()) {
+                Integer id = rst.getInt(1);
+                System.out.println("O ID criado foi: " + id);
+            }
         }
-        rst.close();
     }
 }
