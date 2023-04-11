@@ -1,4 +1,4 @@
-package teste;
+package br.com.alura.jdbc.modelo;
 
 import java.sql.Connection;
 import java.sql.SQLException;
